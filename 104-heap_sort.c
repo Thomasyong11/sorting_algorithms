@@ -3,12 +3,12 @@
 
 /**
  * sift_down - Repair the heap whose root element is at index 'start',
- *             assuming the heaps rooted at its children are valid
+ *             assuming the heaps rooted at its children are valid.
  *
- * @array: The array to sort
- * @start: The starting index of the heap
- * @end: The ending index of the heap
- * @size: The size of the array
+ * @array: The array to sort.
+ * @start: The starting index of the heap.
+ * @end: The ending index of the heap.
+ * @size: The size of the array.
  */
 void sift_down(int *array, size_t start, size_t end, size_t size)
 {
@@ -41,10 +41,10 @@ void sift_down(int *array, size_t start, size_t end, size_t size)
 
 /**
  * heap_sort - Sorts an array of integers in ascending order using the
- *             sift-down heap sort algorithm
+ *             sift-down heap sort algorithm.
  *
- * @array: The array to sort
- * @size: The size of the array
+ * @array: The array to sort.
+ * @size: The size of the array.
  */
 void heap_sort(int *array, size_t size)
 {
