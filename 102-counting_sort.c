@@ -3,7 +3,7 @@
 
 /**
  * counting_sort - Sorts an array of integers in ascending order using the
- *                 counting sort algorithm.
+ * counting sort algorithm.
  *
  * @array: The array to be sorted.
  * @size: The size of the array to be sorted.
