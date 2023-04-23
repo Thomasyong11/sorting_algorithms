@@ -27,6 +27,7 @@ void sift_down(int *array, size_t start, size_t end, size_t size)
 		if (swap != root)
 		{
 			int tmp = array[root];
+
 			array[root] = array[swap];
 			array[swap] = tmp;
 
