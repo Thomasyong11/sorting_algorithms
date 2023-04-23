@@ -1,4 +1,5 @@
-#include "sort.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
  * counting_sort - sorts an array of integers in ascending order using the
@@ -37,11 +38,14 @@ void counting_sort(int *array, size_t size)
         count[array[i]]++;
     }
 
+    printf("Counting array:\n");
+    for (i = 0; i <= (size_t)max; i++) {
+        printf("%d: %d\n", i, count[i]);
+    }
+
     for (i = 1; i <= (size_t)max; i++) {
         count[i] += count[i - 1];
     }
-
-    print_array(count, max + 1);
 
     for (i = 0; i < size; i++) {
         output[count[array[i]] - 1] = array[i];
@@ -54,4 +58,27 @@ void counting_sort(int *array, size_t size)
 
     free(count);
     free(output);
+}
+
+int main(void)
+{
+    int array[] = {5, 3, 2, 7, 8, 6, 4, 1, 9, 0};
+    size_t size = sizeof(array) / sizeof(array[0]);
+    size_t i;
+
+    printf("Original array:\n");
+    for (i = 0; i < size; i++) {
+        printf("%d ", array[i]);
+    }
+    printf("\n");
+
+    counting_sort(array, size);
+
+    printf("Sorted array:\n");
+    for (i = 0; i < size; i++) {
+        printf("%d ", array[i]);
+    }
+    printf("\n");
+
+    return 0;
 }
